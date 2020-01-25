@@ -21,7 +21,22 @@ namespace GreenvilleRevenue
             Console.WriteLine(" Contestants this year: " + contestantsNow);
             Console.WriteLine("-----------------------------");
 
-            // Revenue / contestant comparison here
+            double rev = contestantsNow * 25;
+            Console.WriteLine(" Revenue for this year: {0}", rev.ToString("C"));
+
+            if (contestantsLast < contestantsNow)
+            {
+              Console.WriteLine(" This year has more contestants than last year. ");
+            } 
+            else if (contestantsLast > contestantsNow) 
+            {
+              Console.WriteLine(" This year has fewer contestants than last year. ");
+            } 
+            else
+            {
+              Console.WriteLine(" This year has the same number of contestants as last year. ");
+            }
+            Console.ReadKey();
         }
     }
 }
